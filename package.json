@@ -7,7 +7,11 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "type-check": "tsc --noEmit"
+    "type-check": "tsc --noEmit",
+    "supabase:link": "supabase link --project-ref qdkdosuupmouquvkiqfi",
+    "supabase:migrate": "supabase db push",
+    "supabase:deploy": "supabase functions deploy",
+    "supabase:deploy:all": "supabase functions deploy ingest_event && supabase functions deploy bulk_ingest && supabase functions deploy export_csv && supabase functions deploy blocker && supabase functions deploy create_next_unit"
   },
   "dependencies": {
     "@radix-ui/react-dialog": "^1.0.5",
